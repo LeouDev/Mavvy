@@ -7,7 +7,7 @@ export const PROMPT =
 
 export const MAX_BYTES = 6 * 1024 * 1024;
 export const DAILY_LIMIT = 10;
-export const GLOBAL_DAILY_LIMIT = 200; // across all users; override with the BEAUTIFY_GLOBAL_LIMIT secret
+export const GLOBAL_DAILY_LIMIT = 20; // across all users (cost cap: ~$20/month at most); override with the BEAUTIFY_GLOBAL_LIMIT secret
 
 /** Global cap from the env value, falling back to the default for missing/invalid values. */
 export const globalLimit = (env: string | undefined) => {

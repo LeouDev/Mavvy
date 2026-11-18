@@ -69,10 +69,12 @@ The app shows "Couldn't beautify, try again." until anonymous sign-ins (step 1) 
 - Every call needs a signed-in session (anonymous is fine). JWT verification is on at the gateway.
 - **10 beautifies per user per day** (Philippine time), counted in `beautify_usage`. Failed calls are
   refunded. Clients can't read or change the table or call its functions (RLS on, execute revoked).
+- **20 beautifies per day across all users** (cost cap, roughly $20/month at most). After that everyone
+  sees "Beautify is busy today." Raise it without a redeploy: `supabase secrets set BEAUTIFY_GLOBAL_LIMIT=50`.
 - Uploads: JPEG/PNG only (checked by file signature, not just the declared type), max 6 MB.
 - **Known gap:** a determined person can script new anonymous accounts to get more daily allowances.
   Supabase limits anonymous sign-ins per IP (default 30/hour). Turning on CAPTCHA for sign-ups closes
-  most of the rest. If it ever matters, add a global daily cap in the function.
+  most of the rest. The global daily cap above bounds the cost either way.
 
 ## Local testing (no real Gemini calls)
 

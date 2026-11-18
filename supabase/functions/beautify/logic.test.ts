@@ -49,10 +49,10 @@ test('reserve outcomes: per-user and global caps are distinct 429s', () => {
   assert.equal((reserveOutcome(true) as { status: number }).status, 500); // old boolean shape = misdeployed migration
 });
 
-test('global limit defaults to 200 and accepts a positive integer override', () => {
-  assert.equal(GLOBAL_DAILY_LIMIT, 200);
-  assert.equal(globalLimit(undefined), 200);
+test('global limit defaults to 20 and accepts a positive integer override', () => {
+  assert.equal(GLOBAL_DAILY_LIMIT, 20);
+  assert.equal(globalLimit(undefined), 20);
   assert.equal(globalLimit('50'), 50);
-  assert.equal(globalLimit('0'), 200);
-  assert.equal(globalLimit('abc'), 200);
+  assert.equal(globalLimit('0'), 20);
+  assert.equal(globalLimit('abc'), 20);
 });
