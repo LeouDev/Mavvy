@@ -32,6 +32,16 @@
         {
           "enableRemoteNotifications": false
         }
+      ],
+      "expo-secure-store",
+      "expo-sharing",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Mavvy uses your photo library so you can add pictures of your car and its mods.",
+          "cameraPermission": "Mavvy uses your camera so you can take pictures of your car and its mods.",
+          "microphonePermission": false
+        }
       ]
     ],
     "scheme": "mavvy",

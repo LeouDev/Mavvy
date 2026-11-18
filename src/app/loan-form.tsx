@@ -107,7 +107,7 @@ export default function LoanFormScreen() {
         {field('monthly_amount', 'Amount on your contract (optional)', {
           keyboardType: 'decimal-pad', suffix: '₱', placeholder: computed == null ? '' : String(computed),
         })}
-        <Label style={{ marginTop: -8 }}>Banks round and add fees. If you enter your contract amount, it's used instead.</Label>
+        <Label style={{ marginTop: -8 }}>{"Banks round and add fees. If you enter your contract amount, it's used instead."}</Label>
       </Step>
 
       <Step n="—" title="For reference">

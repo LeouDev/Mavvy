@@ -89,6 +89,12 @@ const MIGRATIONS: string[] = [
   ALTER TABLE loans ADD COLUMN rate_type TEXT NOT NULL DEFAULT 'add_on' CHECK (rate_type IN ('add_on','diminishing'));
   ALTER TABLE loans ADD COLUMN monthly_amount REAL CHECK (monthly_amount IS NULL OR monthly_amount > 0);
   `,
+  // v3: which version of the cover photo to show. Photo paths are stored relative to the documents
+  // directory ('photos/x.jpg') because iOS can change the absolute container path across app updates.
+  `
+  ALTER TABLE cars ADD COLUMN cover_variant TEXT NOT NULL DEFAULT 'original' CHECK (cover_variant IN ('original','beautified'));
+  CREATE INDEX idx_photos_mod ON photos(mod_id);
+  `,
 ];
 
 export async function migrate(db: SQLiteDatabase) {

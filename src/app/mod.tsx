@@ -1,10 +1,13 @@
-import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import { useSQLiteContext } from 'expo-sqlite';
-import { useEffect, useState } from 'react';
-import { Alert } from 'react-native';
-import { Chips, DeleteLink, Field, FormSheet, Step } from '@/components/ui';
+import { useCallback, useEffect, useState } from 'react';
+import { Alert, Image, Pressable, Text, View } from 'react-native';
+import { AddPhotoButtons } from '@/components/AddPhotoButtons';
+import { Chips, DeleteLink, Field, FormSheet, Label, Step } from '@/components/ui';
 import { getCar } from '@/db/cars';
 import { deleteMod, getMod, saveMod } from '@/db/logs';
+import { addPhotos, getModPhotos, type Photo } from '@/db/photos';
+import { uriFor } from '@/lib/photoFiles';
 import { localDate } from '@/lib/format';
 import { MOD_CATEGORIES, validateMod, type ModErrors, type ModForm } from '@/lib/mods';
 
@@ -16,6 +19,11 @@ export default function ModScreen() {
   const [carId, setCarId] = useState<number | null>(null);
   const [form, setForm] = useState<ModForm>({ name: '', category: '', date: localDate(), cost: '', shop: '', notes: '' });
   const [errors, setErrors] = useState<ModErrors>({});
+  const [photos, setPhotos] = useState<Photo[]>([]); // already attached (edit mode)
+  const [pending, setPending] = useState<string[]>([]); // picked, saved with the mod
+
+  // Refresh attached photos when returning from the photo viewer (it may have deleted one).
+  useFocusEffect(useCallback(() => { if (editId) getModPhotos(db, editId).then(setPhotos); }, [db, editId]));
 
   useEffect(() => {
     (async () => {
@@ -37,7 +45,8 @@ export default function ModScreen() {
     setErrors(e);
     if (!value || carId == null) return;
     try {
-      await saveMod(db, carId, value, editId);
+      const modId = await saveMod(db, carId, value, editId);
+      if (pending.length) await addPhotos(db, carId, pending, modId);
       router.back();
     } catch (err) {
       Alert.alert("Couldn't save", String(err));
@@ -62,7 +71,27 @@ export default function ModScreen() {
         {field('shop', 'Shop (optional)', { autoCapitalize: 'words', autoCorrect: false })}
         {field('notes', 'Notes (optional)', { multiline: true })}
       </Step>
-      {/* Phase 4: mod photos go here. */}
+      <Step n="04" title="Photos">
+        {photos.length || pending.length ? (
+          <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 14 }}>
+            {photos.map((p) => (
+              <Pressable key={p.id} accessibilityRole="button" accessibilityLabel="Open photo"
+                onPress={() => router.push({ pathname: '/photo/[id]', params: { id: String(p.id) } })}>
+                <Image source={{ uri: uriFor(p.beautified_uri ?? p.original_uri) }} style={{ width: 72, height: 72, borderRadius: 12 }} />
+              </Pressable>
+            ))}
+            {pending.map((uri) => (
+              <Pressable key={uri} accessibilityRole="button" accessibilityLabel="Remove unsaved photo"
+                onPress={() => setPending((ps) => ps.filter((x) => x !== uri))}>
+                <Image source={{ uri }} style={{ width: 72, height: 72, borderRadius: 12, opacity: 0.7 }} />
+                <Text style={{ position: 'absolute', top: 2, right: 6, color: '#F4F1EB', fontSize: 16 }}>×</Text>
+              </Pressable>
+            ))}
+          </View>
+        ) : null}
+        {pending.length ? <Label style={{ marginBottom: 12 }}>New photos are added when you save.</Label> : null}
+        <AddPhotoButtons onPicked={(uris) => setPending((ps) => [...ps, ...uris])} />
+      </Step>
       {editId ? (
         <DeleteLink label="Delete mod" title="Delete mod?" message="This can't be undone."
           onConfirm={async () => { await deleteMod(db, editId); router.back(); }} />

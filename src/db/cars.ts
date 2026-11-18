@@ -3,6 +3,7 @@ import { getLoanData } from '@/db/loans';
 import { localDate } from '@/lib/format';
 import type { LoanStatus } from '@/lib/loan';
 import { getPmsLogs } from '@/db/logs';
+import { getCoverPath } from '@/db/photos';
 import { nextPms, type PmsStatus } from '@/lib/pms';
 
 export type Car = {
@@ -22,9 +23,10 @@ export type Car = {
   pms_interval_km: number;
   pms_interval_months: number;
   cover_photo_id: number | null;
+  cover_variant: 'original' | 'beautified';
 };
 
-export type CarInput = Omit<Car, 'id' | 'cover_photo_id'>;
+export type CarInput = Omit<Car, 'id' | 'cover_photo_id' | 'cover_variant'>;
 
 const COLS = ['make', 'model', 'year', 'variant', 'plate', 'vin', 'color', 'odometer_km', 'engine', 'transmission', 'fuel_type', 'tank_liters', 'pms_interval_km', 'pms_interval_months'] as const;
 
@@ -41,7 +43,7 @@ export async function saveCar(db: SQLiteDatabase, input: CarInput, id?: number):
   return r.lastInsertRowId;
 }
 
-export type HomeStats = { fuelThisMonth: number; modsTotal: number; loan: LoanStatus | null; pms: PmsStatus | null };
+export type HomeStats = { fuelThisMonth: number; modsTotal: number; loan: LoanStatus | null; pms: PmsStatus | null; coverPath: string | null };
 
 export async function getHomeStats(db: SQLiteDatabase, carId: number): Promise<HomeStats> {
   const month = localDate().slice(0, 7); // 'YYYY-MM'
@@ -50,7 +52,7 @@ export async function getHomeStats(db: SQLiteDatabase, carId: number): Promise<H
   const mods = await db.getFirstAsync<{ s: number }>('SELECT COALESCE(SUM(cost), 0) AS s FROM mods WHERE car_id = ?', [carId]);
   const loan = await getLoanData(db, carId);
   const pms = await getPmsStatus(db, carId);
-  return { fuelThisMonth: fuel?.s ?? 0, modsTotal: mods?.s ?? 0, loan: loan?.status ?? null, pms };
+  return { fuelThisMonth: fuel?.s ?? 0, modsTotal: mods?.s ?? 0, loan: loan?.status ?? null, pms, coverPath: await getCoverPath(db, carId) };
 }
 
 /** Next-PMS status for the car (null when no PMS has been logged). Reads the car fresh so odometer bumps count. */

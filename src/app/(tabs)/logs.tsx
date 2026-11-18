@@ -1,12 +1,14 @@
 import { useFocusEffect, useRouter, type Href } from 'expo-router';
 import { useSQLiteContext } from 'expo-sqlite';
 import { ReactNode, useCallback, useState } from 'react';
-import { Pressable, ScrollView, Text, View } from 'react-native';
+import { Image, Pressable, ScrollView, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { PmsBanner } from '@/components/PmsBanner';
 import { Label, Mono } from '@/components/ui';
 import { getCar, getPmsStatus, type Car } from '@/db/cars';
 import { getFills, getMods, getPmsLogs } from '@/db/logs';
+import { getModThumbs, type Photo } from '@/db/photos';
+import { uriFor } from '@/lib/photoFiles';
 import { km, localDate, peso, shortDate } from '@/lib/format';
 import { efficiency, fuelSummary, type Fill } from '@/lib/fuel';
 import { modBreakdown, type Mod } from '@/lib/mods';
@@ -14,7 +16,7 @@ import type { PmsLog, PmsStatus } from '@/lib/pms';
 import { fonts, radius, useColors } from '@/theme';
 
 type Segment = 'Fuel' | 'PMS' | 'Mods';
-type Data = { car: Car; fills: Fill[]; pmsLogs: PmsLog[]; pms: PmsStatus | null; mods: Mod[] };
+type Data = { car: Car; fills: Fill[]; pmsLogs: PmsLog[]; pms: PmsStatus | null; mods: Mod[]; thumbs: Map<number, Photo> };
 
 export default function LogsTab() {
   const db = useSQLiteContext();
@@ -27,8 +29,9 @@ export default function LogsTab() {
     (async () => {
       const car = await getCar(db);
       if (!car) return setData(null);
-      const [fills, pmsLogs, pms, mods] = await Promise.all([getFills(db, car.id), getPmsLogs(db, car.id), getPmsStatus(db, car.id), getMods(db, car.id)]);
-      setData({ car, fills, pmsLogs, pms, mods });
+      const [fills, pmsLogs, pms, mods, thumbs] = await Promise.all([
+        getFills(db, car.id), getPmsLogs(db, car.id), getPmsStatus(db, car.id), getMods(db, car.id), getModThumbs(db, car.id)]);
+      setData({ car, fills, pmsLogs, pms, mods, thumbs });
     })();
   }, [db]));
 
@@ -56,7 +59,7 @@ export default function LogsTab() {
         })}
       </View>
       <View style={{ marginTop: 16 }}>
-        {segment === 'Fuel' ? <FuelLog fills={data.fills} /> : segment === 'PMS' ? <PmsLogView logs={data.pmsLogs} status={data.pms} car={data.car} /> : <ModsLog mods={data.mods} />}
+        {segment === 'Fuel' ? <FuelLog fills={data.fills} /> : segment === 'PMS' ? <PmsLogView logs={data.pmsLogs} status={data.pms} car={data.car} /> : <ModsLog mods={data.mods} thumbs={data.thumbs} />}
       </View>
     </ScrollView>
   );
@@ -93,12 +96,13 @@ function ListHeader({ title, action, href }: { title: string; action: string; hr
   );
 }
 
-function Row({ href, left, sub, right, rightSub, label }: { href: Href; left: string; sub?: string; right: string; rightSub?: string; label: string }) {
+function Row({ href, left, sub, right, rightSub, label, thumb }: { href: Href; left: string; sub?: string; right: string; rightSub?: string; label: string; thumb?: string }) {
   const c = useColors();
   const router = useRouter();
   return (
     <Pressable onPress={() => router.push(href)} accessibilityRole="button" accessibilityLabel={label}
       style={({ pressed }) => ({ flexDirection: 'row', alignItems: 'center', paddingVertical: 14, marginHorizontal: 12, borderBottomWidth: 0.5, borderColor: c.faint, opacity: pressed ? 0.6 : 1 })}>
+      {thumb ? <Image source={{ uri: thumb }} style={{ width: 44, height: 44, borderRadius: 10, marginRight: 12 }} /> : null}
       <View style={{ flex: 1, paddingRight: 12 }}>
         <Mono size={15} color={c.onPage} numberOfLines={1}>{left}</Mono>
         {sub ? <Label style={{ marginTop: 3 }}>{sub}</Label> : null}
@@ -162,7 +166,7 @@ function PmsLogView({ logs, status, car }: { logs: PmsLog[]; status: PmsStatus |
       ) : (
         <Card>
           <Mono size={26}>{'LOG YOUR LAST PMS\nTO START REMINDERS'}</Mono>
-          <Label style={{ marginTop: 10 }}>We'll work out the next service from your car's interval.</Label>
+          <Label style={{ marginTop: 10 }}>{"We'll work out the next service from your car's interval."}</Label>
         </Card>
       )}
       <ListHeader title="Services" action="Log service" href="/pms" />
@@ -178,7 +182,7 @@ function PmsLogView({ logs, status, car }: { logs: PmsLog[]; status: PmsStatus |
   );
 }
 
-function ModsLog({ mods }: { mods: Mod[] }) {
+function ModsLog({ mods, thumbs }: { mods: Mod[]; thumbs: Map<number, Photo> }) {
   const c = useColors();
   const breakdown = modBreakdown(mods);
   const total = breakdown.reduce((t, b) => t + Math.round(b.total * 100), 0) / 100;
@@ -198,7 +202,8 @@ function ModsLog({ mods }: { mods: Mod[] }) {
       {mods.length === 0 ? <Empty text="No mods yet." /> : null}
       {mods.map((m) => (
         <Row key={m.id} href={{ pathname: '/mod', params: { id: String(m.id) } }} label={`Edit mod ${m.name}`}
-          left={m.name} sub={`${m.category} · ${shortDate(m.date)}${m.shop ? ` · ${m.shop}` : ''}`} right={peso(m.cost)} />
+          left={m.name} sub={`${m.category} · ${shortDate(m.date)}${m.shop ? ` · ${m.shop}` : ''}`} right={peso(m.cost)}
+          thumb={thumbs.get(m.id) ? uriFor(thumbs.get(m.id)!.beautified_uri ?? thumbs.get(m.id)!.original_uri) : undefined} />
       ))}
     </>
   );

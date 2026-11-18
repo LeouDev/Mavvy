@@ -30,6 +30,7 @@ export default function RootLayout() {
         <Stack.Screen name="fuel" options={{ presentation: 'modal' }} />
         <Stack.Screen name="pms" options={{ presentation: 'modal' }} />
         <Stack.Screen name="mod" options={{ presentation: 'modal' }} />
+        <Stack.Screen name="photo/[id]" options={{ presentation: 'modal' }} />
       </Stack>
     </SQLiteProvider>
   );

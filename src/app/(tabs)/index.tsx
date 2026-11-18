@@ -1,11 +1,12 @@
 import { useFocusEffect, useRouter } from 'expo-router';
 import { useSQLiteContext } from 'expo-sqlite';
 import { useCallback, useState } from 'react';
-import { Pressable, ScrollView, Text, View } from 'react-native';
+import { Image, Pressable, ScrollView, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { CircleCta, Label, Mono, NotchCard } from '@/components/ui';
 import { getCar, getHomeStats, type Car, type HomeStats } from '@/db/cars';
 import { km, peso, shortDate } from '@/lib/format';
+import { uriFor } from '@/lib/photoFiles';
 import type { LoanStatus } from '@/lib/loan';
 import type { PmsStatus } from '@/lib/pms';
 import { PmsBanner } from '@/components/PmsBanner';
@@ -71,6 +72,11 @@ function Garage({ car, stats }: { car: Car; stats: HomeStats }) {
           <Text style={{ fontFamily: fonts.sans, fontSize: 15, color: c.ink }}>Car model</Text>
         </View>
         <Mono size={124} numberOfLines={1} style={{ marginTop: 18, marginLeft: -6, width: 600, letterSpacing: -4 }}>{`${car.year}/`}</Mono>
+        {stats.coverPath ? (
+          // Overlaps the bottom of the giant year, like the reference card.
+          <Image source={{ uri: uriFor(stats.coverPath) }} accessibilityLabel={`Cover photo of your ${car.make} ${car.model}`}
+            style={{ height: 210, marginTop: -54, marginHorizontal: 18, borderRadius: 24 }} resizeMode="cover" />
+        ) : null}
 
         <View style={{ flexDirection: 'row', paddingHorizontal: 22, marginTop: 26 }}>
           <Pair label={'Plate /\nnumber'} value={car.plate ?? '—'} />
