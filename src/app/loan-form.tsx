@@ -2,7 +2,7 @@ import { useRouter } from 'expo-router';
 import { useSQLiteContext } from 'expo-sqlite';
 import { useEffect, useState } from 'react';
 import { Alert, Pressable, Text, View } from 'react-native';
-import { Chips, Field, FormSheet, Label, Mono, Step } from '@/components/ui';
+import { Chips, DateField, Field, FormSheet, Label, Mono, Step } from '@/components/ui';
 import { getCar } from '@/db/cars';
 import { deleteLoan, getLoan, saveLoan, type Loan } from '@/db/loans';
 import { localDate, peso } from '@/lib/format';
@@ -95,10 +95,8 @@ export default function LoanFormScreen() {
           {field('annual_rate', 'Rate per year', { keyboardType: 'decimal-pad', suffix: '%', style: { flex: 1 } })}
           {field('term_months', 'Term', { keyboardType: 'number-pad', suffix: 'MO', style: { flex: 1 } })}
         </View>
-        <View style={{ flexDirection: 'row', gap: 16 }}>
-          {field('start_date', 'Start date (YYYY-MM-DD)', { autoCapitalize: 'none', style: { flex: 1.4 } })}
-          {field('due_day', 'Due every day', { keyboardType: 'number-pad', maxLength: 2, style: { flex: 1 } })}
-        </View>
+        <DateField label="Start date" value={form.start_date} onChange={(v) => set({ start_date: v })} error={errors.start_date} />
+        {field('due_day', 'Due every day of the month', { keyboardType: 'number-pad', maxLength: 2 })}
       </Step>
 
       <Step n="03" title="Monthly">

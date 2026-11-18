@@ -2,7 +2,7 @@ import { useRouter } from 'expo-router';
 import { useSQLiteContext } from 'expo-sqlite';
 import { useEffect, useState } from 'react';
 import { Alert } from 'react-native';
-import { Field, FormSheet, Label, Step } from '@/components/ui';
+import { DateField, Field, FormSheet, Label, Step } from '@/components/ui';
 import { getCar } from '@/db/cars';
 import { addPayment, getLoanData, type LoanData } from '@/db/loans';
 import { localDate, peso, shortDate } from '@/lib/format';
@@ -51,8 +51,8 @@ export default function PaymentScreen() {
         ) : null}
         <Field label="Amount" value={amount} onChangeText={(t) => { setAmount(t); setErrors((x) => ({ ...x, amount: undefined })); }}
           error={errors.amount} keyboardType="decimal-pad" suffix="₱" />
-        <Field label="Date paid (YYYY-MM-DD)" value={date} onChangeText={(t) => { setDate(t); setErrors((x) => ({ ...x, date: undefined })); }}
-          error={errors.date} autoCapitalize="none" />
+        <DateField label="Date paid" value={date} onChange={(v) => { setDate(v); setErrors((x) => ({ ...x, date: undefined })); }}
+          error={errors.date} maximumDate={new Date()} />
         <Field label="Note (optional)" value={note} onChangeText={setNote} />
       </Step>
     </FormSheet>

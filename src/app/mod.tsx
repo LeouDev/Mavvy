@@ -3,7 +3,7 @@ import { useSQLiteContext } from 'expo-sqlite';
 import { useCallback, useEffect, useState } from 'react';
 import { Alert, Image, Pressable, Text, View } from 'react-native';
 import { AddPhotoButtons } from '@/components/AddPhotoButtons';
-import { Chips, DeleteLink, Field, FormSheet, Label, Step } from '@/components/ui';
+import { Chips, DateField, DeleteLink, Field, FormSheet, Label, Step } from '@/components/ui';
 import { getCar } from '@/db/cars';
 import { deleteMod, getMod, saveMod } from '@/db/logs';
 import { addPhotos, getModPhotos, type Photo } from '@/db/photos';
@@ -67,7 +67,7 @@ export default function ModScreen() {
       </Step>
       <Step n="03" title="Details">
         {field('cost', 'Cost', { keyboardType: 'decimal-pad', suffix: '₱' })}
-        {field('date', 'Date (YYYY-MM-DD)', { autoCapitalize: 'none' })}
+        <DateField label="Date" value={form.date} onChange={(v) => set({ date: v })} error={errors.date} maximumDate={new Date()} />
         {field('shop', 'Shop (optional)', { autoCapitalize: 'words', autoCorrect: false })}
         {field('notes', 'Notes (optional)', { multiline: true })}
       </Step>

@@ -1,0 +1,29 @@
+{
+  "cli": {
+    "version": ">= 16.0.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "preview": {
+      "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_SUPABASE_URL": "https://ewbtaavxertckuulydsm.supabase.co",
+        "EXPO_PUBLIC_SUPABASE_KEY": "sb_publishable_z5Y9Qu3mU-xk8coKbaoaHA_f7c7AiV2"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "env": {
+        "EXPO_PUBLIC_SUPABASE_URL": "https://ewbtaavxertckuulydsm.supabase.co",
+        "EXPO_PUBLIC_SUPABASE_KEY": "sb_publishable_z5Y9Qu3mU-xk8coKbaoaHA_f7c7AiV2"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "ascAppId": "6836377420"
+      }
+    }
+  }
+}

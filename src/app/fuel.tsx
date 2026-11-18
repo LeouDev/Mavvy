@@ -2,7 +2,7 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useSQLiteContext } from 'expo-sqlite';
 import { useEffect, useState } from 'react';
 import { Alert, View } from 'react-native';
-import { Chips, DeleteLink, Field, FormSheet, Step } from '@/components/ui';
+import { Chips, DateField, DeleteLink, Field, FormSheet, Step } from '@/components/ui';
 import { getCar } from '@/db/cars';
 import { deleteFill, getFill, odometerError, saveFill } from '@/db/logs';
 import { localDate } from '@/lib/format';
@@ -79,7 +79,7 @@ export default function FuelScreen() {
         <Field label="Total paid" value={form.total} error={errors.total} keyboardType="decimal-pad" suffix="₱"
           onChangeText={(t) => { setTotalEdited(true); set({ total: t }); }} />
         {field('odometer', 'Odometer', { keyboardType: 'number-pad', suffix: 'KM', placeholder: carOdo == null ? '' : String(carOdo) })}
-        {field('date', 'Date (YYYY-MM-DD)', { autoCapitalize: 'none' })}
+        <DateField label="Date" value={form.date} onChange={(v) => set({ date: v })} error={errors.date} maximumDate={new Date()} />
         {field('station', 'Station (optional)', { autoCapitalize: 'words', autoCorrect: false })}
       </Step>
       {editId ? (

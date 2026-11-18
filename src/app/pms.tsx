@@ -2,7 +2,7 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useSQLiteContext } from 'expo-sqlite';
 import { useEffect, useState } from 'react';
 import { Alert } from 'react-native';
-import { DeleteLink, Field, FormSheet, Step } from '@/components/ui';
+import { DateField, DeleteLink, Field, FormSheet, Step } from '@/components/ui';
 import { getCar } from '@/db/cars';
 import { deletePms, getPmsLog, odometerError, savePms } from '@/db/logs';
 import { localDate } from '@/lib/format';
@@ -57,7 +57,7 @@ export default function PmsScreen() {
   return (
     <FormSheet title={editId ? 'Edit service' : 'Log service'} saveLabel="Save service" onSave={save}>
       <Step n="—" title="PMS">
-        {field('date', 'Date (YYYY-MM-DD)', { autoCapitalize: 'none' })}
+        <DateField label="Date" value={form.date} onChange={(v) => set({ date: v })} error={errors.date} maximumDate={new Date()} />
         {field('odometer', 'Odometer', { keyboardType: 'number-pad', suffix: 'KM', placeholder: carOdo == null ? '' : String(carOdo) })}
         {field('shop', 'Shop (optional)', { autoCapitalize: 'words', autoCorrect: false })}
         {field('cost', 'Cost (optional)', { keyboardType: 'decimal-pad', suffix: '₱' })}

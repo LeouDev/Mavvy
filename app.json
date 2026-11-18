@@ -9,7 +9,10 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.leoudev.mavvy",
-      "appleTeamId": "Z5643XKUTZ"
+      "appleTeamId": "Z5643XKUTZ",
+      "config": {
+        "usesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -43,11 +46,31 @@
           "cameraPermission": "Mavvy uses your camera so you can take pictures of your car and its mods.",
           "microphonePermission": false
         }
+      ],
+      "@react-native-community/datetimepicker",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/icon.png",
+          "imageWidth": 220,
+          "resizeMode": "contain",
+          "backgroundColor": "#E6E0D6",
+          "dark": {
+            "image": "./assets/icon.png",
+            "backgroundColor": "#E6E0D6"
+          }
+        }
       ]
     ],
     "scheme": "mavvy",
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b45728db-d75e-4fac-b286-897300442903"
+      }
+    },
+    "owner": "galileouuu"
   }
 }

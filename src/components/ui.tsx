@@ -1,7 +1,9 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
+import DateTimePicker, { DateTimePickerAndroid } from '@react-native-community/datetimepicker';
 import { useRouter } from 'expo-router';
-import { ComponentProps, ReactNode } from 'react';
-import { Alert, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, TextInputProps, TextStyle, View, ViewStyle } from 'react-native';
+import { ComponentProps, ReactNode, useState } from 'react';
+import { Alert, Keyboard, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, TextInputProps, TextStyle, View, ViewStyle } from 'react-native';
+import { localDate, shortDate } from '@/lib/format';
 import { fonts, radius, useColors } from '@/theme';
 
 type IconName = ComponentProps<typeof Ionicons>['name'];
@@ -69,6 +71,44 @@ export function Field({ label, error, suffix, style, ...props }: TextInputProps 
         <TextInput placeholderTextColor={c.faint} {...props} style={{ flex: 1, fontFamily: fonts.mono, fontSize: 20, color: c.onPage, paddingVertical: 8 }} />
         {suffix ? <Text style={{ fontFamily: fonts.mono, fontSize: 14, color: c.muted }}>{suffix}</Text> : null}
       </View>
+      {error ? <Label color={c.danger} style={{ marginTop: 4 }}>{error}</Label> : null}
+    </View>
+  );
+}
+
+/** 'YYYY-MM-DD' → local Date (today if blank or malformed). */
+const toDate = (iso: string) => {
+  const [y, m, d] = iso.split('-').map(Number);
+  return y && m && d ? new Date(y, m - 1, d) : new Date();
+};
+
+/** Date input styled like Field. Tap to pick; the value stays a local 'YYYY-MM-DD' string. */
+export function DateField({ label, value, onChange, error, maximumDate, style }: {
+  label: string; value: string; onChange: (v: string) => void; error?: string; maximumDate?: Date; style?: ViewStyle;
+}) {
+  const c = useColors();
+  const [open, setOpen] = useState(false);
+  const pick = (d?: Date) => { if (d) onChange(localDate(d)); };
+  const press = () => {
+    Keyboard.dismiss();
+    if (Platform.OS === 'android') {
+      DateTimePickerAndroid.open({ value: toDate(value), mode: 'date', maximumDate, onValueChange: (_, d) => pick(d) });
+    } else {
+      setOpen((o) => !o);
+    }
+  };
+  return (
+    <View style={[{ marginBottom: 18 }, style]}>
+      <Label color={error ? c.danger : c.muted}>{label}</Label>
+      <Pressable onPress={press} accessibilityRole="button" accessibilityLabel={`${label}, ${shortDate(value)}`}
+        accessibilityHint="Opens a date picker" style={[styles.fieldRow, { borderColor: error ? c.danger : c.faint }]}>
+        <Text style={{ flex: 1, fontFamily: fonts.mono, fontSize: 20, color: c.onPage, paddingVertical: 8 }}>{shortDate(value)}</Text>
+        <Ionicons name={open ? 'chevron-up' : 'calendar-outline'} size={18} color={c.muted} />
+      </Pressable>
+      {open && Platform.OS === 'ios' ? (
+        <DateTimePicker value={toDate(value)} mode="date" display="inline" maximumDate={maximumDate}
+          themeVariant="dark" accentColor={c.onPage} onValueChange={(_, d) => { pick(d); setOpen(false); }} />
+      ) : null}
       {error ? <Label color={c.danger} style={{ marginTop: 4 }}>{error}</Label> : null}
     </View>
   );
