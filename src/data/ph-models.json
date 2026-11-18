@@ -1,0 +1,1654 @@
+[
+ {
+  "make": "Toyota",
+  "model": "Vios",
+  "years": [
+   2018,
+   2026
+  ],
+  "tank_liters": 42,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.3 J MT",
+    "engine": "1.3L 4-cyl",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.3 XE CVT",
+    "engine": "1.3L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.3 XLE CVT",
+    "engine": "1.3L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 G CVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 GR-S CVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Toyota",
+  "model": "Wigo",
+  "years": [
+   2018,
+   2026
+  ],
+  "tank_liters": 33,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.0 E MT",
+    "engine": "1.0L 3-cyl",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.0 G CVT",
+    "engine": "1.0L 3-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Toyota",
+  "model": "Innova",
+  "years": [
+   2016,
+   2026
+  ],
+  "tank_liters": 55,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "2.0 J MT",
+    "engine": "2.0L 4-cyl",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "2.8 E MT",
+    "engine": "2.8L 4-cyl turbo",
+    "transmission": "Manual",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.8 E AT",
+    "engine": "2.8L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.8 V AT",
+    "engine": "2.8L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   }
+  ]
+ },
+ {
+  "make": "Toyota",
+  "model": "Innova Zenix",
+  "years": [
+   2023,
+   2026
+  ],
+  "tank_liters": 52,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "2.0 G CVT",
+    "engine": "2.0L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "2.0 V HEV",
+    "engine": "2.0L 4-cyl hybrid",
+    "transmission": "e-CVT",
+    "fuel_type": "Hybrid"
+   },
+   {
+    "name": "2.0 Q HEV",
+    "engine": "2.0L 4-cyl hybrid",
+    "transmission": "e-CVT",
+    "fuel_type": "Hybrid"
+   }
+  ]
+ },
+ {
+  "make": "Toyota",
+  "model": "Fortuner",
+  "years": [
+   2016,
+   2026
+  ],
+  "tank_liters": 80,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "2.7 G 4x2 AT",
+    "engine": "2.7L 4-cyl",
+    "transmission": "Automatic",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "2.4 G 4x2 AT",
+    "engine": "2.4L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.8 V 4x2 AT",
+    "engine": "2.8L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.8 LTD 4x4 AT",
+    "engine": "2.8L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   }
+  ]
+ },
+ {
+  "make": "Toyota",
+  "model": "Hilux",
+  "years": [
+   2016,
+   2026
+  ],
+  "tank_liters": 80,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "2.4 J 4x2 MT",
+    "engine": "2.4L 4-cyl turbo",
+    "transmission": "Manual",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.4 E 4x2 MT",
+    "engine": "2.4L 4-cyl turbo",
+    "transmission": "Manual",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.4 G 4x2 AT",
+    "engine": "2.4L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.8 Conquest 4x4 AT",
+    "engine": "2.8L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.8 GR-S 4x4 AT",
+    "engine": "2.8L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   }
+  ]
+ },
+ {
+  "make": "Toyota",
+  "model": "Raize",
+  "years": [
+   2022,
+   2026
+  ],
+  "tank_liters": 36,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.2 E MT",
+    "engine": "1.2L 3-cyl",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.2 G CVT",
+    "engine": "1.2L 3-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.0 Turbo CVT",
+    "engine": "1.0L 3-cyl turbo",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Toyota",
+  "model": "Corolla Cross",
+  "years": [
+   2020,
+   2026
+  ],
+  "tank_liters": 47,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.8 G CVT",
+    "engine": "1.8L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.8 V HEV",
+    "engine": "1.8L 4-cyl hybrid",
+    "transmission": "e-CVT",
+    "fuel_type": "Hybrid"
+   },
+   {
+    "name": "1.8 GR-S HEV",
+    "engine": "1.8L 4-cyl hybrid",
+    "transmission": "e-CVT",
+    "fuel_type": "Hybrid"
+   }
+  ]
+ },
+ {
+  "make": "Toyota",
+  "model": "Rush",
+  "years": [
+   2018,
+   2026
+  ],
+  "tank_liters": 45,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.5 E MT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 E AT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "Automatic",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 G GR-S AT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "Automatic",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Toyota",
+  "model": "Avanza",
+  "years": [
+   2022,
+   2026
+  ],
+  "tank_liters": 43,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.3 E MT",
+    "engine": "1.3L 4-cyl",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 G CVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Toyota",
+  "model": "Veloz",
+  "years": [
+   2022,
+   2026
+  ],
+  "tank_liters": 43,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.5 G CVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 V CVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Toyota",
+  "model": "Hiace",
+  "years": [
+   2019,
+   2026
+  ],
+  "tank_liters": 70,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "Commuter Deluxe 2.8 MT",
+    "engine": "2.8L 4-cyl turbo",
+    "transmission": "Manual",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "GL Grandia 2.8 AT",
+    "engine": "2.8L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "Super Grandia 2.8 AT",
+    "engine": "2.8L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   }
+  ]
+ },
+ {
+  "make": "Toyota",
+  "model": "Tamaraw",
+  "years": [
+   2024,
+   2026
+  ],
+  "tank_liters": 55,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "2.4 Utility MT",
+    "engine": "2.4L 4-cyl turbo",
+    "transmission": "Manual",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.4 LTD AT",
+    "engine": "2.4L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   }
+  ]
+ },
+ {
+  "make": "Toyota",
+  "model": "Lite Ace",
+  "years": [
+   2022,
+   2026
+  ],
+  "tank_liters": 43,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.5 Panel Van MT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 Pickup MT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Mitsubishi",
+  "model": "Mirage",
+  "years": [
+   2013,
+   2026
+  ],
+  "tank_liters": 35,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.2 GLX MT",
+    "engine": "1.2L 3-cyl",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.2 GLX CVT",
+    "engine": "1.2L 3-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.2 GLS CVT",
+    "engine": "1.2L 3-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Mitsubishi",
+  "model": "Mirage G4",
+  "years": [
+   2013,
+   2026
+  ],
+  "tank_liters": 42,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.2 GLX MT",
+    "engine": "1.2L 3-cyl",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.2 GLX CVT",
+    "engine": "1.2L 3-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.2 GLS CVT",
+    "engine": "1.2L 3-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Mitsubishi",
+  "model": "Xpander",
+  "years": [
+   2018,
+   2026
+  ],
+  "tank_liters": 45,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.5 GLX MT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 GLX CVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 GLS CVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Mitsubishi",
+  "model": "Xpander Cross",
+  "years": [
+   2020,
+   2026
+  ],
+  "tank_liters": 45,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.5 CVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Mitsubishi",
+  "model": "Montero Sport",
+  "years": [
+   2016,
+   2026
+  ],
+  "tank_liters": 68,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "2.4 GLX 2WD MT",
+    "engine": "2.4L 4-cyl turbo",
+    "transmission": "Manual",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.4 GLS 2WD AT",
+    "engine": "2.4L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.4 Black Series 4WD AT",
+    "engine": "2.4L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   }
+  ]
+ },
+ {
+  "make": "Mitsubishi",
+  "model": "Strada",
+  "years": [
+   2015,
+   2026
+  ],
+  "tank_liters": 75,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "2.4 GLX 2WD MT",
+    "engine": "2.4L 4-cyl turbo",
+    "transmission": "Manual",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.4 GLS 2WD AT",
+    "engine": "2.4L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.4 Athlete 4WD AT",
+    "engine": "2.4L 4-cyl biturbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   }
+  ]
+ },
+ {
+  "make": "Mitsubishi",
+  "model": "L300",
+  "years": [
+   2019,
+   2026
+  ],
+  "tank_liters": 60,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "2.2 Cab & Chassis MT",
+    "engine": "2.2L 4-cyl turbo",
+    "transmission": "Manual",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.2 FB Deluxe MT",
+    "engine": "2.2L 4-cyl turbo",
+    "transmission": "Manual",
+    "fuel_type": "Diesel"
+   }
+  ]
+ },
+ {
+  "make": "Honda",
+  "model": "City",
+  "years": [
+   2020,
+   2026
+  ],
+  "tank_liters": 40,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.5 S CVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 V CVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 RS CVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Honda",
+  "model": "City Hatchback",
+  "years": [
+   2021,
+   2026
+  ],
+  "tank_liters": 40,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.5 S CVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 RS CVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Honda",
+  "model": "Civic",
+  "years": [
+   2022,
+   2026
+  ],
+  "tank_liters": 47,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.5 V Turbo CVT",
+    "engine": "1.5L 4-cyl turbo",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 RS Turbo CVT",
+    "engine": "1.5L 4-cyl turbo",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "2.0 RS e:HEV",
+    "engine": "2.0L 4-cyl hybrid",
+    "transmission": "e-CVT",
+    "fuel_type": "Hybrid"
+   }
+  ]
+ },
+ {
+  "make": "Honda",
+  "model": "BR-V",
+  "years": [
+   2022,
+   2026
+  ],
+  "tank_liters": 42,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.5 S MT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 S CVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 V CVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 VX CVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Honda",
+  "model": "HR-V",
+  "years": [
+   2022,
+   2026
+  ],
+  "tank_liters": 40,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.5 S CVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 V Turbo CVT",
+    "engine": "1.5L 4-cyl turbo",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 RS e:HEV",
+    "engine": "1.5L 4-cyl hybrid",
+    "transmission": "e-CVT",
+    "fuel_type": "Hybrid"
+   }
+  ]
+ },
+ {
+  "make": "Honda",
+  "model": "CR-V",
+  "years": [
+   2023,
+   2026
+  ],
+  "tank_liters": 57,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.5 V Turbo CVT",
+    "engine": "1.5L 4-cyl turbo",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "2.0 RS e:HEV AWD",
+    "engine": "2.0L 4-cyl hybrid",
+    "transmission": "e-CVT",
+    "fuel_type": "Hybrid"
+   }
+  ]
+ },
+ {
+  "make": "Nissan",
+  "model": "Navara",
+  "years": [
+   2015,
+   2026
+  ],
+  "tank_liters": 80,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "2.5 EL 4x2 MT",
+    "engine": "2.5L 4-cyl turbo",
+    "transmission": "Manual",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.5 EL 4x2 AT",
+    "engine": "2.5L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.5 VE 4x2 AT",
+    "engine": "2.5L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.5 PRO-4X 4x4 AT",
+    "engine": "2.5L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   }
+  ]
+ },
+ {
+  "make": "Nissan",
+  "model": "Almera",
+  "years": [
+   2021,
+   2026
+  ],
+  "tank_liters": 35,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.0 Turbo EL MT",
+    "engine": "1.0L 3-cyl turbo",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.0 Turbo VE CVT",
+    "engine": "1.0L 3-cyl turbo",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.0 Turbo VL CVT",
+    "engine": "1.0L 3-cyl turbo",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Nissan",
+  "model": "Terra",
+  "years": [
+   2018,
+   2026
+  ],
+  "tank_liters": 78,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "2.5 VE 4x2 AT",
+    "engine": "2.5L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.5 VL 4x2 AT",
+    "engine": "2.5L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.5 Sport 4x4 AT",
+    "engine": "2.5L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   }
+  ]
+ },
+ {
+  "make": "Nissan",
+  "model": "Kicks",
+  "years": [
+   2022,
+   2026
+  ],
+  "tank_liters": 41,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.2 e-POWER VE",
+    "engine": "1.2L 3-cyl series hybrid",
+    "transmission": "Single-speed",
+    "fuel_type": "Hybrid"
+   },
+   {
+    "name": "1.2 e-POWER VL",
+    "engine": "1.2L 3-cyl series hybrid",
+    "transmission": "Single-speed",
+    "fuel_type": "Hybrid"
+   }
+  ]
+ },
+ {
+  "make": "Suzuki",
+  "model": "Ertiga",
+  "years": [
+   2019,
+   2026
+  ],
+  "tank_liters": 45,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.5 GL MT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 GL AT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "Automatic",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 GLX AT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "Automatic",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 Hybrid GLX AT",
+    "engine": "1.5L 4-cyl mild hybrid",
+    "transmission": "Automatic",
+    "fuel_type": "Hybrid"
+   }
+  ]
+ },
+ {
+  "make": "Suzuki",
+  "model": "Dzire",
+  "years": [
+   2018,
+   2026
+  ],
+  "tank_liters": 37,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.2 GL MT",
+    "engine": "1.2L",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.2 GL+ AGS",
+    "engine": "1.2L",
+    "transmission": "AMT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.2 GL CVT",
+    "engine": "1.2L",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Suzuki",
+  "model": "Jimny",
+  "years": [
+   2019,
+   2026
+  ],
+  "tank_liters": 40,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.5 GL 4x4 MT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 GLX 4x4 AT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "Automatic",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Suzuki",
+  "model": "Celerio",
+  "years": [
+   2021,
+   2026
+  ],
+  "tank_liters": 32,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.0 GA MT",
+    "engine": "1.0L 3-cyl",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.0 GL CVT",
+    "engine": "1.0L 3-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Suzuki",
+  "model": "S-Presso",
+  "years": [
+   2020,
+   2026
+  ],
+  "tank_liters": 27,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.0 GL MT",
+    "engine": "1.0L 3-cyl",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.0 GL+ AGS",
+    "engine": "1.0L 3-cyl",
+    "transmission": "AMT",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Suzuki",
+  "model": "Swift",
+  "years": [
+   2019,
+   2026
+  ],
+  "tank_liters": 37,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.2 GL MT",
+    "engine": "1.2L",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.2 GL CVT",
+    "engine": "1.2L",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.2 GLX CVT",
+    "engine": "1.2L",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Suzuki",
+  "model": "XL7",
+  "years": [
+   2020,
+   2026
+  ],
+  "tank_liters": 45,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.5 GL MT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 GLX AT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "Automatic",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 Hybrid AT",
+    "engine": "1.5L 4-cyl mild hybrid",
+    "transmission": "Automatic",
+    "fuel_type": "Hybrid"
+   }
+  ]
+ },
+ {
+  "make": "Ford",
+  "model": "Ranger",
+  "years": [
+   2022,
+   2026
+  ],
+  "tank_liters": 80,
+  "pms_interval_km": 10000,
+  "pms_interval_months": 12,
+  "variants": [
+   {
+    "name": "2.0 XLS 4x2 MT",
+    "engine": "2.0L 4-cyl turbo",
+    "transmission": "Manual",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.0 XLS 4x2 AT",
+    "engine": "2.0L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.0 XLT 4x2 AT",
+    "engine": "2.0L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.0 Wildtrak 4x4 AT",
+    "engine": "2.0L 4-cyl biturbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "Raptor 2.0 4x4 AT",
+    "engine": "2.0L 4-cyl biturbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   }
+  ]
+ },
+ {
+  "make": "Ford",
+  "model": "Territory",
+  "years": [
+   2020,
+   2026
+  ],
+  "tank_liters": 52,
+  "pms_interval_km": 10000,
+  "pms_interval_months": 12,
+  "variants": [
+   {
+    "name": "1.5 EcoBoost Trend",
+    "engine": "1.5L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 EcoBoost Titanium",
+    "engine": "1.5L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Ford",
+  "model": "Everest",
+  "years": [
+   2022,
+   2026
+  ],
+  "tank_liters": 80,
+  "pms_interval_km": 10000,
+  "pms_interval_months": 12,
+  "variants": [
+   {
+    "name": "2.0 Trend 4x2 AT",
+    "engine": "2.0L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.0 Sport 4x2 AT",
+    "engine": "2.0L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.0 Titanium+ 4x2 AT",
+    "engine": "2.0L 4-cyl biturbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "3.0 V6 Titanium+ 4x4 AT",
+    "engine": "3.0L V6 turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   }
+  ]
+ },
+ {
+  "make": "Hyundai",
+  "model": "Accent",
+  "years": [
+   2019,
+   2026
+  ],
+  "tank_liters": 45,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.4 GL MT",
+    "engine": "1.4L 4-cyl",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.4 GL CVT",
+    "engine": "1.4L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.6 CRDi GL MT",
+    "engine": "1.6L 4-cyl turbo",
+    "transmission": "Manual",
+    "fuel_type": "Diesel"
+   }
+  ]
+ },
+ {
+  "make": "Hyundai",
+  "model": "Creta",
+  "years": [
+   2022,
+   2026
+  ],
+  "tank_liters": 50,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.5 GL IVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 GLS IVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Hyundai",
+  "model": "Stargazer",
+  "years": [
+   2023,
+   2026
+  ],
+  "tank_liters": 40,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.5 GL IVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 GLS IVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Hyundai",
+  "model": "Tucson",
+  "years": [
+   2022,
+   2026
+  ],
+  "tank_liters": 54,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "2.0 GLS AT",
+    "engine": "2.0L 4-cyl",
+    "transmission": "Automatic",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "2.0 CRDi GLS AT",
+    "engine": "2.0L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   }
+  ]
+ },
+ {
+  "make": "Kia",
+  "model": "Soluto",
+  "years": [
+   2019,
+   2026
+  ],
+  "tank_liters": 43,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.4 LX MT",
+    "engine": "1.4L 4-cyl",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.4 EX AT",
+    "engine": "1.4L 4-cyl",
+    "transmission": "Automatic",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Kia",
+  "model": "Sonet",
+  "years": [
+   2022,
+   2026
+  ],
+  "tank_liters": 45,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.5 LX IVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 EX IVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Kia",
+  "model": "Stonic",
+  "years": [
+   2020,
+   2026
+  ],
+  "tank_liters": 45,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.4 LX MT",
+    "engine": "1.4L 4-cyl",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.4 EX AT",
+    "engine": "1.4L 4-cyl",
+    "transmission": "Automatic",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Kia",
+  "model": "Carnival",
+  "years": [
+   2022,
+   2026
+  ],
+  "tank_liters": 72,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "2.2 CRDi EX AT",
+    "engine": "2.2L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "2.2 CRDi SX AT",
+    "engine": "2.2L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   }
+  ]
+ },
+ {
+  "make": "Geely",
+  "model": "Coolray",
+  "years": [
+   2020,
+   2026
+  ],
+  "tank_liters": 45,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.5T Comfort DCT",
+    "engine": "1.5L 3-cyl turbo",
+    "transmission": "DCT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5T Premium DCT",
+    "engine": "1.5L 3-cyl turbo",
+    "transmission": "DCT",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5T Sport DCT",
+    "engine": "1.5L 3-cyl turbo",
+    "transmission": "DCT",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Geely",
+  "model": "Emgrand",
+  "years": [
+   2022,
+   2026
+  ],
+  "tank_liters": 50,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.5 Comfort MT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 Premium CVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Geely",
+  "model": "Okavango",
+  "years": [
+   2021,
+   2026
+  ],
+  "tank_liters": 55,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.5T Urban DCT",
+    "engine": "1.5L 3-cyl turbo mild hybrid",
+    "transmission": "DCT",
+    "fuel_type": "Hybrid"
+   },
+   {
+    "name": "1.5T Urban+ DCT",
+    "engine": "1.5L 3-cyl turbo mild hybrid",
+    "transmission": "DCT",
+    "fuel_type": "Hybrid"
+   }
+  ]
+ },
+ {
+  "make": "MG",
+  "model": "ZS",
+  "years": [
+   2019,
+   2026
+  ],
+  "tank_liters": 45,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.5 Std MT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 Alpha AT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "Automatic",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "MG",
+  "model": "5",
+  "years": [
+   2021,
+   2026
+  ],
+  "tank_liters": 45,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.5 Std MT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "Manual",
+    "fuel_type": "Gasoline"
+   },
+   {
+    "name": "1.5 Alpha CVT",
+    "engine": "1.5L 4-cyl",
+    "transmission": "CVT",
+    "fuel_type": "Gasoline"
+   }
+  ]
+ },
+ {
+  "make": "Isuzu",
+  "model": "D-Max",
+  "years": [
+   2020,
+   2026
+  ],
+  "tank_liters": 76,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.9 LS 4x2 MT",
+    "engine": "1.9L 4-cyl turbo",
+    "transmission": "Manual",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "1.9 LS-A 4x2 AT",
+    "engine": "1.9L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "3.0 LS-E 4x4 AT",
+    "engine": "3.0L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   }
+  ]
+ },
+ {
+  "make": "Isuzu",
+  "model": "mu-X",
+  "years": [
+   2021,
+   2026
+  ],
+  "tank_liters": 80,
+  "pms_interval_km": 5000,
+  "pms_interval_months": 6,
+  "variants": [
+   {
+    "name": "1.9 LS-A 4x2 AT",
+    "engine": "1.9L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "3.0 LS-E 4x2 AT",
+    "engine": "3.0L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   },
+   {
+    "name": "3.0 LS-E 4x4 AT",
+    "engine": "3.0L 4-cyl turbo",
+    "transmission": "Automatic",
+    "fuel_type": "Diesel"
+   }
+  ]
+ }
+]
